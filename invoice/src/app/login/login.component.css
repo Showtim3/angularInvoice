@@ -1,92 +1,10 @@
-* {
-  margin:0;
-  padding: 0;
-}
-
-.wrapper {
-
-  font-family: 'Oswald', sans-serif;
-  background-color: #00a071;
-  background-image: linear-gradient(to bottom right, #00F260, #0575E6);
-}
-
-.container{
-  /*border: 3px solid black;*/
-  margin:0 auto;
-  height:95vh;
-  width:500px;
-
-}
-.form-box{
-  margin: auto;
-  text-align: center;
-  position: relative;
-  top:15%;
-}
-
-.heading{
-  font-size: 140px;
-  font-weight: 700;
-  color:white;
-  letter-spacing: 22px;
-  text-transform: uppercase;
-  text-shadow:  3px 5px rgba(0, 0, 0, 0.15);
-}
-
-.input{
-  text-align: center;
-  position: relative;
-  margin-top: 40px;
-
-}
-
-.label{
-  font-size: 45px;
-  color:white;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-shadow:  3px 5px rgba(0, 0, 0, 0.15);
-}
-
-.td-label{
-  padding-bottom: 10px;
-}
-
-
-.username , .password{
-  margin-left:30px;
-  background-color: transparent;
-  border: 2px solid #dadada;
-  border-radius: 7px;
-  padding: 10px;
-
-  font-size: 20px;
-  color:white;
-  text-shadow:  3px 5px rgba(0, 0, 0, 0.15);
-
-}
-
-.username:focus , .password:focus {
-  outline: none;
-  border-color: #9ecaed;
-  box-shadow: 0 0 30px #9ecaed;
-}
-
-.btn-submit{
-  padding: 2px 40px 2px 40px;
-  font-family: 'Oswald', sans-serif;
-  font-size:40px;
-  color:white;
-  background-color: transparent;
-  border:2px solid white;
-  margin-top: 40px;
-  margin-left: -40px;
-  border-radius: 20px;
-}
-
-
-.btn-submit:hover{
-  box-shadow: 0 0 50px #9ecaed;
-  transform: scale(1.1);
-  transition: all 0.2s;
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
