@@ -1,0 +1,24 @@
+<h1>InvoiceList</h1>
+<table class="table">
+  <thead>
+  <tr>
+    <th >#</th>
+    <th >amount</th>
+    <th>createdBy</th>
+    <th >id</th>
+    <th >status</th>
+  </tr>
+  </thead>
+
+<tbody>
+ <tr *ngFor="let user of usersList">
+  <td>{{user.$key}}</td>
+  <td>{{user.amount}}</td>
+  <td>{{user.created_by}}</td>
+  <td>{{user.id}}</td>
+  <td>{{user.status}}</td>
+  <td><button (click)="onSelect(user.id)" >Get Details</button></td>
+</tr>
+
+</tbody>
+</table>

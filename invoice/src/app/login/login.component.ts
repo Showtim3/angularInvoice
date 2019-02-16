@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   onClick(){
-     console.log("Click detected");
+     //console.log("Click detected");
      this.authorize();
   }
 
@@ -28,10 +28,10 @@ export class LoginComponent implements OnInit {
     const password = this.password;
 
     const [err, result] = await on(this.authService.doLogin({email, password}));
-    console.log(err);
-    console.log(result)
+   // console.log(err);
+    //console.log(result)
 
-    console.log(JSON.parse(JSON.stringify(result)))
+    //console.log(JSON.parse(JSON.stringify(result)))
 
   }
 }
