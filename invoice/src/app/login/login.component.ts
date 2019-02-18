@@ -27,11 +27,18 @@ export class LoginComponent implements OnInit {
     const email = this.username;
     const password = this.password;
 
-    const [err, result] = await on(this.authService.doLogin({email, password}));
+    await on(this.authService.doLogin({email, password}));
    // console.log(err);
-    //console.log(result)
+   //  console.log(result)
+   //
+   //  console.log(JSON.parse(JSON.stringify(result)))
 
-    //console.log(JSON.parse(JSON.stringify(result)))
+  }
 
+ async registerHandler() {
+    console.log("register Fired");
+   const[err,result] =  await on(this.authService.insertData());
+   if(err) console.log("THE ERROR IS : " + err);
+   else console.log("Worked" + result);
   }
 }

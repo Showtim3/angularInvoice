@@ -1,0 +1,98 @@
+{
+  "users" : {
+    "Y29vbHJpc2hhYmhyYXdhdEBnbWFpbC5jb20=" : {
+      "invoice_details" : {
+        "invoice1" : {
+          "amount" : 100,
+          "created_by" : "Anas",
+          "items" : [ {
+            "amount" : 45,
+            "name" : "Item choice 1",
+            "quantity" : 1,
+            "tax" : 5
+          }, {
+            "amount" : 42,
+            "name" : "Item choice 2",
+            "quantity" : 2,
+            "tax" : 8
+          } ],
+          "status" : "paid"
+        },
+        "invoice2" : {
+          "amount" : 1000,
+          "created_by" : "Anas",
+          "items" : [ {
+            "amount" : 450,
+            "name" : "Item choice x1",
+            "quantity" : 10,
+            "tax" : 50
+          }, {
+            "amount" : 420,
+            "name" : "Item choice x2",
+            "quantity" : 20,
+            "tax" : 80
+          } ],
+          "status" : "unpaid"
+        }
+      },
+      "invoice_list" : [ {
+        "amount" : 100,
+        "created_by" : "Anas",
+        "id" : "invoice1",
+        "status" : "paid"
+      }, {
+        "amount" : "1000",
+        "created_by" : "Anas",
+        "id" : "invoice2",
+        "status" : "unpaid"
+      } ]
+    },
+    "Z29rdXNzajNAZ21haWwuY29t" : {
+      "invoice_details" : {
+        "invoice1" : {
+          "amount" : 100,
+          "created_by" : "Rishabh",
+          "items" : [ {
+            "amount" : 45,
+            "name" : "Item choice 1",
+            "quantity" : 1,
+            "tax" : 5
+          }, {
+            "amount" : 42,
+            "name" : "Item choice 2",
+            "quantity" : 2,
+            "tax" : 8
+          } ],
+          "status" : "paid"
+        },
+        "invoice2" : {
+          "amount" : 1000,
+          "created_by" : "Rishabh",
+          "items" : [ {
+            "amount" : 450,
+            "name" : "Item choice x1",
+            "quantity" : 10,
+            "tax" : 50
+          }, {
+            "amount" : 420,
+            "name" : "Item choice x2",
+            "quantity" : 20,
+            "tax" : 80
+          } ],
+          "status" : "unpaid"
+        }
+      },
+      "invoice_list" : [ {
+        "amount" : 100,
+        "created_by" : "Rishabh",
+        "id" : "invoice1",
+        "status" : "paid"
+      }, {
+        "amount" : "1000",
+        "created_by" : "Rishabh",
+        "id" : "invoice2",
+        "status" : "unpaid"
+      } ]
+    }
+  }
+}

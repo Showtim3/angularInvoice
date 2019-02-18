@@ -1,5 +1,52 @@
-<h1>Invoice Details</h1>
-{{converted}}
-<div *ngFor="let key of converted">
-  <p>{{key}}</p>
+<div class="panel panel-default">
+  <div class="panel-heading">InvoiceList</div>
+  <table class="table">
+    <thead>
+    <tr>
+
+      <th scope="col">amount</th>
+      <th scope="col">createdBy</th>
+      <th scope="col">ItemsCount</th>
+      <th scope="col">status</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <td  *ngFor="let details of invoiceDetails; let i = index">
+        <span *ngIf="i===2">{{count}}</span>
+        <span *ngIf="i!=2">{{details}}</span>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">ItemsList</div>
+  <table class="table">
+    <thead>
+    <tr>
+
+      <th scope="col">amount</th>
+      <th scope="col">Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">tax</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr   *ngFor="let item of itemsArray">
+      <td>
+        {{item}}
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
 </div>
