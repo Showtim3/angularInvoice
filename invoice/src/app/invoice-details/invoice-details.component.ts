@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../services/auth/auth.service";
 import {ActivatedRoute} from "@angular/router";
+import {DataService} from "../services/data/data.service";
 
 @Component({
   selector: 'app-invoice-details',
@@ -13,13 +14,15 @@ export class InvoiceDetailsComponent implements OnInit {
   invoiceDetails:any = [];
   itemsArray: any = [];
   count: number = 0;
+  public value='';
 
-  constructor(private authService: AuthService,private route: ActivatedRoute) { }
+
+  constructor(private authService: AuthService,private route: ActivatedRoute, public dataService: DataService) { }
 
  async ngOnInit() {
 
-    this.idClicked = this.route.snapshot.paramMap.get('id');
-  const invoiceDetailsRaw = await this.authService.getInvoiceDetails(this.idClicked);
+    this.idClicked = this.dataService.id;
+    const invoiceDetailsRaw = await this.authService.getInvoiceDetails(this.idClicked);
 
   invoiceDetailsRaw.snapshotChanges().subscribe(item => {
      this.invoiceDetails = [];
@@ -52,8 +55,20 @@ export class InvoiceDetailsComponent implements OnInit {
     }
 
 
+
     return true;
   }
+  setData(){
+    this.dataService.serviceData = this.value;
+    console.log(this.value);
+  }
+
+  getData(){
+    this.value = this.dataService.serviceData;
+    return this.dataService.serviceData;
+
+  }
+
 }
 
 

@@ -1,3 +1,4 @@
+<h1>Hello from invoice details</h1>
 <div class="wrapper">
   <div class="card-wrapper">
     <div *ngFor="let item of itemsArray" class='card'>
@@ -9,7 +10,7 @@
     </div>
   </div>
   <div class="panel panel-default">
-    <div class="panel-heading">InvoiceList</div>
+    <div class="panel-heading">InvoiceDetailsList</div>
     <table class="table">
       <thead>
       <tr>
@@ -29,5 +30,7 @@
       </tbody>
     </table>
   </div>
+  <label for="serviceDataBox">Sharing Data</label><input [(ngModel)]="value" id="serviceDataBox" type="text" (input)="setData()"/>
+  {{getData()}}
 </div>
 

@@ -25,6 +25,14 @@
       </tbody>
     </table>
   </div>
+  <label for="serviceData">Sharing Data</label><input [(ngModel)]="value" id="serviceData" type="text"  (input)="setData()" />
+  <h1>Still Working??</h1>
+  {{getData()}}
+
+  <div *ngIf="showDetails===true">
+    <app-invoice-details></app-invoice-details>
+  </div>
+
   </div>
 
 

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../services/auth/auth.service";
 import {Router} from "@angular/router";
+import {DataService} from "../services/data/data.service";
 
 @Component({
   selector: 'app-invoice-list',
@@ -12,7 +13,9 @@ export class InvoiceListComponent implements OnInit {
 
 invoiceList:any = [];
 public idClicked: string = null;
-  constructor(private authService: AuthService, private router: Router) {}
+public value = null;
+public showDetails = false;
+  constructor(private authService: AuthService, private router: Router, public dataService: DataService) {}
 
   async ngOnInit() {
 
@@ -28,11 +31,20 @@ public idClicked: string = null;
 
   }
 
-
   onSelect(id) {
-    this.idClicked = id;
-    this.router.navigate(['/invoice_details',this.idClicked])
+    this.dataService.id = id;
+    console.log(this.dataService.id)
+    this.showDetails = true;
   }
+
+  setData(){
+    this.dataService.serviceData = this.value;
+  }
+  getData(){
+    this.value = this.dataService.serviceData;
+    return this.dataService.serviceData;
+  }
+
 }
 
 

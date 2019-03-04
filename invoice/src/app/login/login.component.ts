@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     const [error, data] = await on(this.authService.doLogin({email, password}));
 
     if(!error) {
-      this.router.navigateByUrl('/invoice_list');
+      this.router.navigateByUrl('/invoice');
     } else {
       alert("Incorrect credentials")
     }

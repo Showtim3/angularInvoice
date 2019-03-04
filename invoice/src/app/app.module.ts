@@ -11,13 +11,15 @@ import {environment} from "../environments/environment";
 import {AppRoutingModule, routingComponents} from "./app.routing.module";
 import {AuthService} from "./services/auth/auth.service";
 import {AngularFirestore} from "@angular/fire/firestore";
-
+import {DataService} from "./services/data/data.service";
+import {InvoiceParentComponent} from "./invoice-parent/invoice-parent.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     routingComponents,
+    InvoiceParentComponent
 
   ],
   imports: [
@@ -28,9 +30,9 @@ import {AngularFirestore} from "@angular/fire/firestore";
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  providers: [AuthService,AngularFirestore],
+  providers: [AuthService,AngularFirestore,DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
