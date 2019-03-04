@@ -1,10 +1,71 @@
-.colorgraph {
-  height: 5px;
-  border-top: 0;
-  background: #c4e17f;
-  border-radius: 5px;
-  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+*{
+  margin:0;padding: 0;
+}
+.wrapper{
+  background-color: #4e73df;
+  height: 100vh;
+
+}
+.box{
+  width:800px;
+  margin: auto;
+  display: flex;
+  height:500px;
+  position: relative;
+  top:15%;
+  box-shadow:0 0 30px black;
+  flex-wrap: flex;
+
+
+}
+.img-container{
+  width:45%;
+  background-image: linear-gradient(to right,rgba(255, 255, 255, 0.253),rgba(0, 0, 0, 0.212)), url('./assests/bird.jpg');
+  background-size: cover;
+  border-radius: 8px;
+  background-position: center;
+}
+
+.login-container{
+  text-align: center;
+  border-radius: 8px;
+  width: 55%;
+  background-color: white;
+}
+.welcome{
+  font-size:40px;
+  margin-top:30px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.form-group{
+  padding: 5px 30px;
+
+}
+
+.input{
+  font-size: 20px;
+  padding: 22px;
+  border-radius: 10px;
+}
+
+.btn{
+  width: 200px;
+  font-size:20px;
+  font-weight: 500;
+  border-radius: 18px;
+  padding: 10px;
+}
+
+.btn-success{
+  margin-top:20px;
+  margin-bottom: 10px;
+
+}
+
+.btn-primary{
+  margin-top:10px;
+  width:200px;
 }

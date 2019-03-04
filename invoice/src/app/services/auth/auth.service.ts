@@ -1,13 +1,15 @@
 import {Injectable} from '@angular/core';
 import {AngularFireAuth} from "@angular/fire/auth";
-
-
 import {AngularFireDatabase,AngularFireList }from 'angularfire2/database'
 import {authToken} from "@firebase/storage/dist/test/testshared";
 import GenUtil from "../../utils/GenUtil";
+
+
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class AuthService {
 usersList: AngularFireList<any>;
 invoiceDetails: AngularFireList<any>;

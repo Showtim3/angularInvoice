@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {AngularFireAuth} from 'angularfire2/auth';
 import on from 'await-handler';
 import {AuthService} from "../services/auth/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -13,26 +14,25 @@ export class LoginComponent implements OnInit {
   public username = '';
   public password = '';
 
-  constructor(private authService: AuthService){}
+  constructor(private authService: AuthService, private router: Router){}
 
   ngOnInit() {
   }
 
   onClick(){
-     //console.log("Click detected");
      this.authorize();
   }
 
   async authorize(){
     const email = this.username;
     const password = this.password;
+    const [error, data] = await on(this.authService.doLogin({email, password}));
 
-    await on(this.authService.doLogin({email, password}));
-   // console.log(err);
-   //  console.log(result)
-   //
-   //  console.log(JSON.parse(JSON.stringify(result)))
-
+    if(!error) {
+      this.router.navigateByUrl('/invoice_list');
+    } else {
+      alert("Incorrect credentials")
+    }
   }
 
  async registerHandler() {
