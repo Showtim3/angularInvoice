@@ -33,7 +33,7 @@ public showDetails = false;
 
   onSelect(id) {
     this.dataService.id = id;
-    console.log(this.dataService.id)
+    console.log(this.dataService.id);
     this.showDetails = true;
   }
 

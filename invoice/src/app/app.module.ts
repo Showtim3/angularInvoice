@@ -13,13 +13,17 @@ import {AuthService} from "./services/auth/auth.service";
 import {AngularFirestore} from "@angular/fire/firestore";
 import {DataService} from "./services/data/data.service";
 import {InvoiceParentComponent} from "./invoice-parent/invoice-parent.component";
+import { FirebaseComponent } from './firebase/firebase.component';
+import {StoreModule} from "@ngrx/store";
+import {invoiceReducer} from "./services/firebaseNew/invoice.reducer";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     routingComponents,
-    InvoiceParentComponent
+    InvoiceParentComponent,
+    FirebaseComponent
 
   ],
   imports: [
@@ -31,6 +35,9 @@ import {InvoiceParentComponent} from "./invoice-parent/invoice-parent.component"
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase),
     AppRoutingModule,
+    StoreModule.forRoot({
+      reducer: invoiceReducer
+    })
   ],
   providers: [AuthService,AngularFirestore,DataService],
   bootstrap: [AppComponent]
